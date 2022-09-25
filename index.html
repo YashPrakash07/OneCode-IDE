@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
 
+    <style type="text/css" media="screen">
+      #codeEditor { 
+          width: 100%;
+          height: 400px;
+      }
+  </style>
     <title>IDE</title>
 
     <head>
@@ -25,8 +31,10 @@
               <option value="0">Python</option>
             </select>
           </div>
+<div id="codeEditor">
 
-          <textarea id="codeEditor"></textarea>
+</div>
+          <!-- <textarea id="codeEditor"></textarea> -->
 
 
 <button id="compileBtn" class="Compile">Compile</button>
@@ -40,6 +48,7 @@
          </div>
          </div>
        <script src="script.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.11.1/ace.min.js" integrity="sha512-WNoDKeq6XFy0dm713RQPhzSxN+MF234x6CFDcEW7e+t6HSzQYV5Sym2OpuJfeH7Ov/rxdTQCBTKYFPm37OZluw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       </body>
       </html>
 

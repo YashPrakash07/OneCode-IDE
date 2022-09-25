@@ -1,6 +1,12 @@
 var compileBtn= document.getElementById("compileBtn");
 
 var outputText= document.getElementById("output");
+//  var code= document.getElementById("codeEditor");
+let code;
+ window.onload= function(){
+    code = ace.edit("codeEditor");
+    code.session.setMode("ace/mode/javascript");
+ }
 
 compileBtn.onclick= function(event)
 {
@@ -22,7 +28,7 @@ function runCode()
 var req= new XMLHttpRequest();
  req.open("post", "https://codequotient.com/api/executeCode");
 
- const data= { "code": codeEditor.value, langId:langId.value};
+ const data= { "code": code.session.getValue(), langId:langId.value};
 
  req.setRequestHeader("Content-Type","application/json");
  
